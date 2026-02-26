@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Estructuras condicionales múltiples.</title>
+        <link rel="shortcut icon" href="Imagenes/icono.png" type="image/x-icon">
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+    </head>
+    <body>
+        
+        <h1>Estructuras repetición.</h1>
+        <ol>
+        <li>
+        <h4>Introducción:</h4>
+        <p>
+            Las estructuras de repetición permiten realizar un conjunto de acciones de manera repetida (o cíclica), siempre que el resultado de evaluar una determinada condición sea verdadero. A este tipo de estructuras también se las conoce como <code>bucles</code>.
+        </p>
+        <p>
+            Existen tres tipos de estructuras de repetición: <code>while</code>, <code>do-while</code> y <code>for</code>.
+        </p>
+        </li>
+        <li>
+            <h4>Estructura de repetición <code>while</code>(<i>mientras</i>).</h4>
+            <p>
+                En un bucle <code>while</code> primero se evalúa la condición, y en el caso de que ésta sea verdadera, se realizarán las acciones. Una vez completado el anterior ciclo, se repetirá el mismo procedimiento. Las acciones se realizarán repetidamente <code>mientras</code> el resultado de evaluar la condición sea <b style="color: green">verdadero</b>.
+            </p>
+            <p>
+                A continuación, se muestra el diagrama de flujo y su sintaxis en <code>C++</code> de una estructura de repetición <code>while</code>:
+            </p>
+
+            <div class="center">
+                <img src="Imagenes/imagen1.png" alt="">
+            </div>
+
+            
+            <p style="float:left; font-size: 15px;">
+                <i>Diagrama de flujo de una estructura de repetición.</i>
+            </p>
+            <p style="text-align:right; font-size: 15px">
+                <i>Sintaxis en <code>C++</code> en una estructura de repetición <code>while</code>.</i>
+            </p>
+            <br>
+            <p>
+                Para comprender como se aplica esta estructura a la hora de resolver problemas, a continuación, se muestra un ejemplo:
+            </p>
+            <p>
+                <b>Ejemplo</b>: Se desea realizar un algoritmo que imprima en pantalla los primeros diez números, utilizando una estructura de <code>repetición while</code>. Realizar el diagrama de flujo y programar en <code>C++</code> del algoritmo.
+            </p>
+            <p>
+                <b>Solución</b>: El algoritmo deberá, en primera instancia, declarar la variable que se va a utilizar (<b>conta</b>), y asignarle el primer número, utilizando una estructura de <code>repetición while</code>. Realizar el diagrama de flujo y programar en <code>C++</code> del algoritmo.
+            </p>
+             <div class="center">
+                <img src="Imagenes/imagen2.png" alt="">
+            </div>
+            
+            <p style="text-align: center;">
+                <i>Diagrama de flujo del algoritmo.</i>
+            </p>
+            <p>
+                Una vez realizado el diagrama de flujo del <b>algoritmo</b>, se deberá expresar en un lenguaje de programación. El lenguaje pedido por la consigna es el <code>C++</code>:
+            </p>
+<pre><code class="language-cpp">
+#include&lt;iostream>
+using namespace std;
+int main()
+    {
+        int conta =1; //Declara la variable entera "conta" asignándole1.
+        while( conta &lt;= 10) //Se evalúa la condición de la estructura
+            {
+                cout&lt;&lt;conta; //Se imprime en pantalla el número.
+                conta = conta + 1; //Incrementa el valor de conta en uno.
+            }
+        return 0;
+    }
+</code></pre>
+        </li>
+        <li>
+            <h4>Estructura de repetición <code>do-while</code>(<b>hacer mientras</b>).</h4>
+        </li>
+        <p>
+            En un bucle <code>do-while</code> primero se realizan las acciones y después se evalúa la condición. En el caso de que ésta sea verdadera, se vuelvan a realizar las acciones. Las acciones se realizarán en forma repetida hasta que la condición sea <b style="color:red">falsa</b>.
+        </p>
+        <p>
+            A continuación, se muestra el diagrama y su sintaxis <code>C++</code> de una estructura de repetición <b>do-while</b>.
+        </p>
+        
+        <div class="center">
+                <img src="Imagenes/imagen3.png" alt="">
+        
+        </div>
+        <br>
+        <p style="float:left;font-size: 13px">
+            <i>Diagrama de flujo de una estructura de repetición.</i>
+        </p>
+        <p style="text-align:right;font-size: 13px;">
+            <i>Sintaxis en <code>C++</code> en una estructura de repetición <b>do-while</b>.</i>
+        </p>
+        <br>
+        <p>
+            Para comprender como se aplica esta estructura a la hora de resolver problemas, a continuación, se muestra un ejemplo:
+        </p>
+            <p>
+                <b>Ejemplo:</b>
+                Se desea realizar un algoritmo que imprima en pantalla los primeros diez números , utilizando una estructura de repetición <b>do-while</b>. Realizar el diagrama de flujo y programa en <code>C++</code> del algoritmo.
+            </p>
+            <p>
+                <b>Solución:</b>
+                El algoritmo deberá, al igual que en el ejemplo anterior. declarar la variable que se va a utilizar (<b>conta</b>), y asignarle el primer número. Luego, se utilizará la estructura de repetición para imprimir el número en pantalla, además de incrementar en una unidad a la variable <b>conta</b> (de esa forma, en el siguiente ciclo se imprimirá el siguiente número). El diagrama de flujo del algoritmo es el siguiente:
+            </p>
+            <div class="center">
+                <img src="Imagenes/imagen4.png" alt="">
+        
+            </div>
+            <p>
+                Una vez realizado el diagrama de flujo del algoritmo, se deberá expresar en un lenguaje de programación. El lenguaje pedido por la consigna es <code>C++</code>:
+            </p>
+<pre><code class="language-cpp">
+#include&lt;iostream>
+using namespace std;
+int main()
+    {
+        int conta = 1; //Declara la variable entera "conta" asignándole 1.
+        do
+        {
+            cout&lt;&lt;conta; //Se imprime en pantalla el número.
+            conta = conta + 1; //Incrementa el valor de conta en uno.
+        }while(conta &lt;= 10);
+        
+        return 0;
+    }
+</code></pre>
+        <p style="text-align: center;"><i>Programa en <code>C++</code> del algoritmo.</i></p>
+        </li>
+        <li><h4>Estructura de repetición <code>for</code>(<b>desde y hasta</b>)</h4>
+        <p>
+            En un bucle <code>for</code> las acciones se realizan un númerp exacto de veces. Se deben definir una varaible contadora con su valor de inicio, la condición de permanencia del <b>bucle</b>. y el incremento de la varaible contadora. El <code>for</code> realizará en forma iterativa las acciones hastas que no se cumpla la condición de permanencia, y en cada iteración incrementara el valor de la variable contadora.
+        </p>
+        <p>
+            A continuación, se muestra el diagrama de flujo y su sintaxis <code>C++</code> de una estructura de repetición <code>for</code>:
+        </p>
+        
+        <div class="center">
+                <img src="Imagenes/imagen5.png" alt="">
+        
+        </div>
+      
+        <p style="float:left; font-size: 15px;">
+            <i>Diagrama de flujo de una estructura de repetición.</i>
+        </p>
+        <p style="text-align: right; font-size: 15px;">
+            <i>Sintaxis en <code>C++</code> en una estructura de repetición <b>for</b>.</i>
+        </p>
+        <br>
+        <p>
+            A continuación, se muestran algunas consideraciones para tener en cuenta al utilizar esta estructura:
+        </p>
+        <ol>
+            <li>
+                Cuando el bloque de las acciones del bucle <code>for</code> sólo tiene una única acción, los tokens <code>{</code> y <code>}</code> son opcionales.
+            </li>
+            <li>
+                En la inicialización del contador se especifica el valor inicial de la variable contador. Si llamamos <code>i</code> a la variable contador, ejemplos típicos de inicialización pueden ser <code>i = 0</code>, <code>i = 1</code>, <code>i = -1</code>, etc.
+            </li>
+            <li>
+                La condición de permanencia es la condición que se tiene que cumplir para que el <code>for</code> permanezca iterando dentro del bucle. Cuando esta condición no se cumpla más, el <code>for</code> finalizará. Ejemplo típicos de condiciones de permanencia son <code>i &lt; 10</code>, <code>i &lt;= 100</code>, etc.
+            </li>
+            <li>
+                El incremento de la varaible contadora definirá cuánto se incrementará el contador cada iteración. Ejemplo típicos de incrementos son <code>i = i + 1</code>, <code>i++</code>, <code>i = i + 2</code>, <code>i = i - 1</code>, <code>i--</code>, <code>i = i - 2</code>, etc.
+            </li>
+        </ol>
+        <p>
+            Para comprender como se aplica esta estructura a la hora de resolver problemas, a continuación, se muestra un ejemplo:
+        </p>
+        <p>
+            <b>Ejemplo</b>: Se desea realizar un algoritmo que imprima en pantalla los primeros diez números, utilizando una estrucura de repetición <code>for</code>. Realizar el diagrama de flujo y programa en <code>C++</code> del algoritmo.
+        </p>
+        <p>
+            <b>Solución</b>: Al igual que en las soluciones anteriores, el algoritmo deberá declarar la variable que se va a utilizar (<b>contar</b>). Luego, se utilizará del contador, la condición de permanencia y el incremento del contador. El diagrama de flujo del algoritmo es el siguiente:
+        </p>
+        <div class="center">
+                <img src="Imagenes/imagen6.png" alt="">
+        
+        </div>
+        <br>
+        <p style="text-align: center;"><i>Diagrama de flujo del algoritmo.</i></p>
+        <p>
+            Una vez realizado el diagrama de flujo del algoritmo, se deberá expresar en un lenguaje de programación. El lenguaje pedido por la consigna es <code>C++</code>.
+        </p>
+<pre><code class="language-cpp">
+#include&lt;iostream>
+using namespace std;
+int main()
+    {
+        for(int conta = 1 ; conta &lt;= 10 ; conta++) //Estructura repetitiva for.
+            {
+                cout&lt;&lt;conta;
+            }
+        return 0;
+    }
+</code></pre>
+        <p style="text-align: center;">
+            <i>Programa en <code>C++</code> del algoritmo.</i>
+        </p>
+        </li>
+        </ol>
+
+        <h4>Ejercicios.</h4>
+        <ol>
+            <li>
+                Realiza un algoritmo que cuente desde <b>1</b> hasta un número que el usuario ingrese por teclado, usando un ciclo <code>while</code>. Muestre cada número por pantalla. También el realice el diagrama de flujo y el programa en <code>C++</code>.
+            
+            <fieldset>
+                <legend>Ejercicio 1</legend>
+            <iframe width="1071" height="509" src="https://www.youtube.com/embed/N3Noask8usA" title="Estructuras de repeticion - Ejercicio 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </fieldset>
+            <br>
+            </li>
+            <li>
+                Rehacer el ejercicio 1 utilizando la estructura de repetición <code>do-while</code>.
+            
+            <fieldset>
+                <legend>Ejercicio 2</legend>
+            <iframe width="1071" height="509" src="https://www.youtube.com/embed/N3Noask8usA" title="Estructuras de repeticion - Ejercicio 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </fieldset>
+            <br>
+            </li>
+            <li>
+                Diseñar un algoritmo basado en un estructura de repetición <code>for</code> que imprima en pantalla todos los números comprendidos entre valores <b>n</b> y <b>m</b>. Los valores de <b>n</b> y <b>m</b> se deben ingresar por teclado. Hacer diagrama de flujo y codificación en <code>C++</code>.
+            
+            <fieldset>
+                <legend>Ejericio 3</legend>
+            <iframe width="997" height="570" src="https://www.youtube.com/embed/cDFBojM4jQU" title="Estructura de repeticion - Ejercicio 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </fieldset>
+            <br>
+            </li>
+            <li>
+                Realice el algoritmo que permita ingresar letras hasta que ingrese la letra 'z'. El algoritmo debe contar la cantidad total de letras ingresadas y la cantidad de vocales. Al finalizar debe mostrar la cantidad de letras ingresadas y la cantidad de vocales. Realice el diagrama de flujo y la códificacion en lenguaje <code>C++</code>.
+            <fieldset>
+                <legend>Ejercicio 4</legend>
+            <iframe width="624" height="360" src="https://www.youtube.com/embed/5r7f3ChjMWc" title="Estructuras de repeticion - Ejercicio 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </fieldset>
+            <br>
+            </li>
+            <li>
+                Realice el algoritmo que permita ingresar cinco números enteros y determine la suma total de los mismos, el número mayor ingresado y la cantidad de valores que sean mayores a diez.
+            
+            <fieldset>
+                <legend>Ejercicio 5</legend>
+            <iframe width="587" height="428" src="https://www.youtube.com/embed/YCBdCH71jz4" title="Estructuras de repeticion - Ejercicio 5." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </fieldset>
+            <br>
+            </li>
+           
+            <li>
+                <p>
+                    Diseñar un algoritmo que simule un proceso básico de <code style="color:green">login</code>, utilizando una contraseña numérica de cuatro dígitos. El programa deberá realizar primero una validación de la contraseña y, una vez <code style="color:red">validada</code> correctamente, solicitar su reingreso para permitir el acceso a un mensaje secreto.
+                </p>
+                <p>
+                Para la realización del algoritmo se deberá tener en cuenta los siguientes puntos:
+                </p>
+                <ol type="I">
+                    <li>
+                        El programa deberá solicitar al usuario que ingrese una contraseña numérica de cuatro dígitos para realizar la validación inicial. Mensaje sugerido: <code>Ingrese la contraseña para validación</code>.
+                    </li>
+                    <li>
+                        Si la contraseña ingresada es incorrecta, el programa deberá mostrar el mensaje <code>Contraseña inválida. Intente nuevamente</code> y volver a solicitar el ingreso de la contraseña hasta que sea correcta.
+                    </li>
+                    <li>
+                        Una vez que la contraseña haya sido validada correctamente, el programa deberá informar al usuario que la validación fue exitosa y solicitar el reingreso de la contraseña. Mensaje sugerido: <code>Contraseña validada. Ingrese nuevamente para iniciar sesión</code>.
+                    </li>
+                d) Si la segunda contraseña coincide con la contraseña validada anteriormente, el programa deberá mostrar en pantalla el mensaje secreto, indicando que el login fue exitoso, y luego finalizar. Mensaje sugerido: <code>Acceso concedido. Mensaje secreto: …</code>.
+
+                e) Si la segunda contraseña no coincide, el programa deberá mostrar el mensaje <code>Error en el login. La contraseña no coincide</code> y volver a solicitar únicamente el reingreso de la contraseña.
+                </ol>
+                <p>
+                Realizar el diagrama de flujo correspondiente y la codificación en lenguaje <code>C++</code>.
+                </p>
+                <fieldset>
+                    <legend>Ejercicio 6</legend>
+                <iframe width="640" height="505" src="https://www.youtube.com/embed/NVfWNElQOQs" title="Estructuras de repeticion - Ejercicio 6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </fieldset>
+                </li>
+        </ol>
+        <script type="module" src="main.js"></script>
+    </body>
+</html>
